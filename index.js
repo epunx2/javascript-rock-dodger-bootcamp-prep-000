@@ -77,7 +77,7 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  
+  let eventKey = e;
   if (e.key == 37) {
     moveDodgerLeft();
     e.stopPropagation();
