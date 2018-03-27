@@ -81,7 +81,8 @@ function moveDodger(key) {
     moveDodgerLeft();
     key.stopPropagation();
     key.preventDefault();
-  }else if (key.which == 39){
+  } 
+  if (key.which == 39){
     moveDodgerRight();
     key.stopPropagation();
     key.preventDefault();
