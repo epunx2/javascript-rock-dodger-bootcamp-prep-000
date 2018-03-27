@@ -73,6 +73,7 @@ function createRock(x) {
 function endGame() {
   clearInterval(gameInterval);
   // End the game by clearing removing all ROCKS from the DOM,
+  rock.remove();
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!");
 }
