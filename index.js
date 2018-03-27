@@ -76,6 +76,20 @@ function endGame() {
   alert("YOU LOSE!");
 }
 
+function moveDodger(key) {
+  if (key.which == 37) {
+    moveDodgerLeft();
+    key.stopPropagation();
+    key.preventDefault();
+  } 
+  if (key.which == 39){
+    moveDodgerRight();
+    key.stopPropagation();
+    key.preventDefault();
+  }
+
+}
+
 function moveDodgerLeft() {
   let dodgerLeft = positionToInteger(DODGER.style.left);
   function step() {
@@ -107,18 +121,7 @@ function positionToInteger(p) {
 }
 
 function start() {
-  window.addEventListener('keydown', function moveDodger(key){
-    if (key.which == 37) {
-    moveDodgerLeft();
-    key.stopPropagation();
-    key.preventDefault();
-  } 
-  if (key.which == 39){
-    moveDodgerRight();
-    key.stopPropagation();
-    key.preventDefault();
-  }
-  });
+  window.addEventListener('keydown', function moveDodger());
 
   START.style.display = 'none';
 
