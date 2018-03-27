@@ -76,12 +76,12 @@ function endGame() {
   alert("YOU LOSE!");
 }
 
-function moveDodger(event) {
-  if (eventKey.key == 37) {
+function moveDodger(e) {
+  if (e.key == 37) {
     moveDodgerLeft();
     e.stopPropagation();
     e.preventDefault();
-  }else if (eventKey.key == 39){
+  }else if (e.key == 39){
     moveDodgerRight();
     e.stopPropagation();
     e.preventDefault();
@@ -120,7 +120,7 @@ function positionToInteger(p) {
 }
 
 function start() {
-  window.addEventListener('keydown', moveDodger(event));
+  window.addEventListener('keydown', moveDodger(e));
 
   START.style.display = 'none';
 
