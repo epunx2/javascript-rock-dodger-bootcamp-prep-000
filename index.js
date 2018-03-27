@@ -77,16 +77,16 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  const e = parseInt(e.which || e.detail);
-  if (e) {
+  const eventKey = parseInt(e.which || e.detail);
+  if (eventKey) {
     moveDodgerLeft();
-    e.stopPropagation();
-    e.preventDefault();
+    eventKey.stopPropagation();
+    eventKey.preventDefault();
   } 
-  if (e){
+  if (eventKey){
     moveDodgerRight();
-    e.stopPropagation();
-    e.preventDefault();
+    eventKey.stopPropagation();
+    eventKey.preventDefault();
   }
 
 }
@@ -122,7 +122,7 @@ function positionToInteger(p) {
 }
 
 function start() {
-  window.addEventListener('keydown', moveDodger(e));
+  window.addEventListener('keydown', moveDodger());
 
   START.style.display = 'none';
 
