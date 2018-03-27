@@ -71,10 +71,10 @@ function createRock(x) {
 
 
 function endGame() {
-  let rockEl = document.querySelector("rock");
+  let rockEl = document.querySelector(".rock");
   clearInterval(gameInterval);
   // End the game by clearing removing all ROCKS from the DOM,
-  GAME.removeChild("rock");
+  GAME.removeChild(rockEl);
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!");
 }
