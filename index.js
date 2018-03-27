@@ -76,7 +76,7 @@ function endGame() {
   alert("YOU LOSE!");
 }
 
-function moveDodger(key) {
+function moveDodger() {
   if (key.which == 37) {
     moveDodgerLeft();
     key.stopPropagation();
