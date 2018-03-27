@@ -44,7 +44,14 @@ function createRock(x) {
 
   GAME.appendChild(rock);
   
-  function moveRock() {
+  
+
+  moveRock();
+  ROCKS.push(rock);
+  return rock;
+}
+
+function moveRock() {
     var rockBottom = 0;
  
     function step() {
@@ -62,13 +69,7 @@ function createRock(x) {
       ROCKS.remove();
     }
     window.requestAnimationFrame(step);
-  }
-
-  moveRock();
-  ROCKS.push(rock);
-  return rock;
 }
-
 function endGame() {
   clearInterval(gameInterval);
   // End the game by clearing removing all ROCKS from the DOM,
