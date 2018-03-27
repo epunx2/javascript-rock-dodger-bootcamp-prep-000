@@ -76,15 +76,15 @@ function endGame() {
   alert("YOU LOSE!");
 }
 
-function moveDodger(e) {
-  if (e.key == 37) {
+function moveDodger(key) {
+  if (key.which == 37) {
     moveDodgerLeft();
-    e.stopPropagation();
-    e.preventDefault();
-  }else if (e.key == 39){
+    key.stopPropagation();
+    key.preventDefault();
+  }else if (key.which == 39){
     moveDodgerRight();
-    e.stopPropagation();
-    e.preventDefault();
+    key.stopPropagation();
+    key.preventDefault();
   }
 
 }
@@ -120,7 +120,7 @@ function positionToInteger(p) {
 }
 
 function start() {
-  window.addEventListener('keydown', moveDodger(e));
+  window.addEventListener('keydown', moveDodger(key));
 
   START.style.display = 'none';
 
