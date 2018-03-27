@@ -78,15 +78,15 @@ function endGame() {
 
 function moveDodger(e) {
   const e = parseInt(e.which || e.detail);
-  if (eventKey) {
+  if (e) {
     moveDodgerLeft();
-    eventKey.stopPropagation();
-    eventKey.preventDefault();
+    e.stopPropagation();
+    e.preventDefault();
   } 
-  if (eventKey){
+  if (e){
     moveDodgerRight();
-    eventKey.stopPropagation();
-    eventKey.preventDefault();
+    e.stopPropagation();
+    e.preventDefault();
   }
 
 }
