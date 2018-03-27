@@ -77,16 +77,16 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  const eventKey = parseInt(e.which || e.
-  if (e.which == 37) {
+  const eventKey = parseInt(e.which || e.detail);
+  if (eventKey) {
     moveDodgerLeft();
-    e.stopPropagation();
-    e.preventDefault();
+    eventKey.stopPropagation();
+    eventKey.preventDefault();
   } 
-  if (e.which == 39){
+  if (eventKey){
     moveDodgerRight();
-    e.stopPropagation();
-    e.preventDefault();
+    eventKey.stopPropagation();
+    eventKey.preventDefault();
   }
 
 }
