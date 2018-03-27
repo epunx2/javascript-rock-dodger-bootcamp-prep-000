@@ -77,7 +77,7 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  const eventKey = e.which
+  const eventKey = parseInt(e.which || e.
   if (e.which == 37) {
     moveDodgerLeft();
     e.stopPropagation();
