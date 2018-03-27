@@ -77,7 +77,7 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  const eventKey = parseInt(e.which || e.detail);
+  const e = parseInt(e.which || e.detail);
   if (eventKey) {
     moveDodgerLeft();
     eventKey.stopPropagation();
