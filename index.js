@@ -62,12 +62,13 @@ function createRock(x) {
       ROCKS.remove();
     }
     window.requestAnimationFrame(step);
-  }
+}
 
   moveRock();
   ROCKS.push(rock);
   return rock;
 }
+
 
 function endGame() {
   clearInterval(gameInterval);
@@ -78,15 +79,15 @@ function endGame() {
 
 function moveDodger(e) {
   const eventKey = parseInt(e.which || e.detail);
-  if (eventKey) {
+  if (eventKey == 37) {
     moveDodgerLeft();
-    eventKey.stopPropagation();
-    eventKey.preventDefault();
+    e.stopPropagation();
+    e.preventDefault();
   } 
-  if (eventKey){
+  if (eventKey == 39){
     moveDodgerRight();
-    eventKey.stopPropagation();
-    eventKey.preventDefault();
+    e.stopPropagation();
+    e.preventDefault();
   }
 
 }
@@ -122,7 +123,7 @@ function positionToInteger(p) {
 }
 
 function start() {
-  window.addEventListener('keydown', moveDodger());
+  window.addEventListener('keydown', moveDodger(e));
 
   START.style.display = 'none';
 
