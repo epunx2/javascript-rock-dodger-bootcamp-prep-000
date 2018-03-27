@@ -71,7 +71,7 @@ function createRock(x) {
 
 
 function endGame() {
-  let rockEl = document.querySelectorAll(".rock");
+  document.querySelectorAll(".rock").remove();
   clearInterval(gameInterval);
   // End the game by clearing removing all ROCKS from the DOM,
   GAME.removeChild(rockEl);
